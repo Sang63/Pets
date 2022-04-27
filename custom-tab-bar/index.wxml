@@ -1,0 +1,6 @@
+<!--custom-tab-bar/index.wxml-->
+<van-tabbar active="{{ active }}" bind:change="changeActive" active-color="#0cf">
+  <van-tabbar-item icon="home-o" name="home">首页</van-tabbar-item>
+  <van-tabbar-item icon="like-o" name="cloudRalse">云养</van-tabbar-item>
+  <van-tabbar-item icon="friends-o" name="mine">个人中心</van-tabbar-item>
+</van-tabbar>

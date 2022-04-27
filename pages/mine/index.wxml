@@ -1,0 +1,44 @@
+<!--个人中心-->
+<view id="mine">
+    <view class="header">
+        <van-notice-bar color="#fff" background="rgba(0,0,0,0.2)" left-icon="volume-o" text="截止2022年5月，我们已经帮助500多只宝贝找到它们自己的家！" />
+        <view>
+            <view wx:if="{{userInfo}}">
+                <image class="image" src="{{userInfo.avatarUrl}}"></image>
+                <view class="name" >{{userInfo.nickName}}</view>
+            </view>
+            <view wx:else>
+                <image class="image" src="/assets/image/head.png"></image>
+                <view class="name" bind:tap="login">登录/注册</view>
+            </view>
+        </view>
+        <view class="nav">
+            <view class="nav-item">
+                <view>{{userInfo.money || 0}}</view>
+                <view class="title">余额</view>
+            </view>
+            <view class="nav-item">
+                <view>{{userInfo.loveValue || 0}}</view>
+                <view class="title">爱心值</view>
+            </view>
+            <view class="nav-item">
+                <view>{{userInfo.message || 0}}</view>
+                <view class="title">消息</view>
+            </view>
+        </view>
+    </view>
+    <view class="group">
+        <van-cell-group>
+            <van-cell icon="flower-o" title="我的云养" is-link />
+            <van-cell icon="eye-o" title="我的关注" is-link />
+            <van-cell icon="cart-o" title="我的订单" is-link />
+        </van-cell-group>
+    </view>
+    <view class="group">
+        <van-cell-group class="group">
+            <van-cell icon="diamond-o" title="个人资料" is-link />
+            <van-cell wx:if="{{userInfo}}" bind:tap="close" icon="close" title="退出登录" is-link />
+        </van-cell-group>
+    </view>
+
+</view>
