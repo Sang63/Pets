@@ -2,5 +2,8 @@
   "navigationBarTitleText": "首页",
   "navigationBarBackgroundColor": "#0cf",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "ani-card":"../../components/card/index"
+  }
 }
