@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "宠物详情",
+  "navigationBarBackgroundColor": "#0cf",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

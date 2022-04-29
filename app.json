@@ -1,33 +1,38 @@
 {
-  "pages": [
-    "pages/home/index",
-    "pages/cloudRalse/index",
-    "pages/mine/index",
-    "pages/index/index"    
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0cf",
-    "navigationBarTitleText": "宠物",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "custom": true,
-    "list": [{
-      "pagePath": "pages/home/index",
-      "text": "首页",
-      "iconPath": ""
-    }, {
-      "pagePath": "pages/cloudRalse/index",
-      "text": "云养"
-    }, {
-      "pagePath": "pages/mine/index",
-      "text": "个人中心"
-    }]
-  },
-  "usingComponents": {
-    "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/home/index",
+        "pages/cloudRalse/index",
+        "pages/mine/index",
+        "pages/index/index",
+        "pages/animalInfo/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#0cf",
+        "navigationBarTitleText": "宠物",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": ""
+            },
+            {
+                "pagePath": "pages/cloudRalse/index",
+                "text": "云养"
+            },
+            {
+                "pagePath": "pages/mine/index",
+                "text": "个人中心"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    },
+    "sitemapLocation": "sitemap.json"
 }

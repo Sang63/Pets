@@ -16,6 +16,13 @@
                     "name": "",
                     "pathName": "pages/home/index",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/animalInfo/index",
+                    "query": "id=ea795837624e571e05414eef157e50e8",
                     "scene": null,
                     "launchMode": "default"
                 }

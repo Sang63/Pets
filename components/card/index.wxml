@@ -1,5 +1,5 @@
-<view class="card">
-    <image class="cart-left" src="{{animalData.avatarUrl[0]}}"></image>
+<view class="card" bind:tap="toInfo">
+    <image class="cart-left" src="{{animalData.avatarUrl[0]}}" ></image>
     <view class="cart-right">
         <view class="cart-right-title">{{animalData.title}}</view>
         <view class="cart-right-text">{{animalData.introduction}}</view>

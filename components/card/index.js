@@ -7,6 +7,10 @@ Component({
 
     },
     methods: {
-
+        toInfo(){
+            wx.navigateTo({
+              url: `/pages/animalInfo/index?id=${this.data.animalData._id}`,
+            })
+        }
     }
 })
