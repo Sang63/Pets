@@ -1,7 +1,11 @@
 <view class="card" bind:tap="toInfo">
     <image class="cart-left" src="{{animalData.avatarUrl[0]}}"></image>
     <view class="cart-right">
-        <view class="cart-right-title">{{animalData.title}}</view>
+        <view class="cart-right-title">
+            <slot name='icon'></slot>
+            {{animalData.title}}
+            <slot name='tag'></slot>
+        </view>
         <view class="cart-right-text">{{animalData.introduction}}</view>
         <view class="cart-right-tag">
             <van-tag class="tag-item" round type="primary">{{animalData.immune?'已':'未'}}免疫</van-tag>

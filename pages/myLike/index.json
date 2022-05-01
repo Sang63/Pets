@@ -4,7 +4,9 @@
   "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "ani-card":"/components/card/index",
-    "van-empty": "@vant/weapp/empty/index"
+    "ani-card": "/components/card/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tag": "@vant/weapp/tag/index"
   }
 }

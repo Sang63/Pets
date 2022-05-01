@@ -17,7 +17,7 @@ exports.main = async (event) => {
   const animalList = await animal.where({
     _id: db.command.in(userInfo.data.likeAnimalIds)
   })
-  .orderBy('age', sort)
+  .orderBy('age', sort)  /*云开发排序方法*/
   .get()
 
   return {

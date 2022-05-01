@@ -10,9 +10,13 @@ Page({
         this.setData({
             ageSort:ageSort==='desc'?'asc':'desc'
         })
+        this.getLikeList()
     },
     onLoad(){
-        const userInfo=wx.getStorageSync('userInfo');
+        
+    },
+    onShow(){
+      const userInfo=wx.getStorageSync('userInfo');
         this.setData({
             userInfo
         })
@@ -20,6 +24,7 @@ Page({
             this.getLikeList()
         }
     },
+    //获取宠物详情
     async getLikeList(){
         const { userInfo, ageSort } = this.data
         const { result: { data }} = await wx.cloud.callFunction({
@@ -29,7 +34,7 @@ Page({
             sort: ageSort
           }
         })
-        console.log(data)
+        // console.log(data)
         this.setData({
           animalLikeList: data
         })

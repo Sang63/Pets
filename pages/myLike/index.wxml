@@ -4,7 +4,10 @@
             <van-button icon="{{ ageSort==='desc'?'arrow-down':'arrow-up' }}" wx:key="index" round type="info" color="#0cf" size="small" bind:tap="changeSort">年龄</van-button>
         </view>
         <view wx:if="{{ animalLikeList.length>0 }}">
-
+            <ani-card wx:for="{{animalLikeList}}" wx:key="index" animalData="{{item}}">
+                <van-icon color="#0cf" slot="icon" name="medal-o" />
+                <van-tag plain round slot="tag" color="#0cf">{{ item.age }}个月</van-tag>
+            </ani-card>
         </view>
         <view wx:else>
             <van-empty style="text-align: center;" description="您还没有关注的宠物！" />
