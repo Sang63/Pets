@@ -1,19 +1,19 @@
 <!--pages/home/index.wxml-->
 <view id="home">
     <scroll-view refresher-triggered="{{triggered}}" style="height: {{windowHeight}}px;" scroll-y="true" bind:scrolltolower="scrolltolower" refresher-enabled="{{true}}" bind:refresherrefresh="refresherrefresh">
-    <swiper indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.4)" autoplay="{{true}}" previous-margin="40rpx" next-margin="40rpx" circular="{{true}}" indicator-active-color="#0cf">
-        <block wx:for="{{swiper}}" wx:key="*this">
-            <swiper-item class="swiper-item">
-                <image src="{{item}}"></image>
-            </swiper-item>
-        </block>
-    </swiper>
+        <swiper indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.4)" autoplay="{{true}}" previous-margin="40rpx" next-margin="40rpx" circular="{{true}}" indicator-active-color="#0cf">
+            <block wx:for="{{swiper}}" wx:key="*this">
+                <swiper-item class="swiper-item">
+                    <image src="{{item}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
 
-    <view class="tab">
-        <van-button wx:for="{{tabList}}" wx:key="index" class="tab-item" round type="info" color="{{ active === item.id ? '#0cf' : '#ccc' }}" size="small" data-id="{{item.id}}" bind:tap="setActive">{{item.title}}</van-button>
-    </view>
-    <view class="content">
-        <ani-card wx:for="{{animalList}}" wx:key="index" animalData="{{item}}"></ani-card>
-    </view>
+        <view class="tab">
+            <van-button wx:for="{{tabList}}" wx:key="index" class="tab-item" round type="info" color="{{ active === item.id ? '#0cf' : '#ccc' }}" size="small" data-id="{{item.id}}" bind:tap="setActive">{{item.title}}</van-button>
+        </view>
+        <view class="content">
+            <ani-card wx:for="{{animalList}}" wx:key="index" animalData="{{item}}"></ani-card>
+        </view>
     </scroll-view>
 </view>

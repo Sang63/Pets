@@ -1,12 +1,12 @@
 <view class="card" bind:tap="toInfo">
-    <image class="cart-left" src="{{animalData.avatarUrl[0]}}" ></image>
+    <image class="cart-left" src="{{animalData.avatarUrl[0]}}"></image>
     <view class="cart-right">
         <view class="cart-right-title">{{animalData.title}}</view>
         <view class="cart-right-text">{{animalData.introduction}}</view>
         <view class="cart-right-tag">
-            <van-tag class="tag-item" round type="primary">{{immune?'已':'未'}}免疫</van-tag>
-            <van-tag class="tag-item" round type="success">{{insectRepellent?'已':'未'}}驱虫</van-tag>
-            <van-tag class="tag-item" round type="danger">{{sterilization?'已':'未'}}绝育</van-tag>
+            <van-tag class="tag-item" round type="primary">{{animalData.immune?'已':'未'}}免疫</van-tag>
+            <van-tag class="tag-item" round type="success">{{animalData.insectRepellent?'已':'未'}}驱虫</van-tag>
+            <van-tag class="tag-item" round type="danger">{{animalData.sterilization?'已':'未'}}绝育</van-tag>
         </view>
     </view>
 </view>

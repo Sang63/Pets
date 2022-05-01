@@ -10,33 +10,39 @@
 
     <view class="header">
         <view class="title">{{ animalInfo.title }}</view>
-        <van-button class="share" open-type="share" icon="share-o" plain/>
+        <van-button class="share" open-type="share" icon="share-o" plain />
     </view>
 
     <view class="info-card">
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.varieties }}
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.varieties }}
         </view>
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.sex?'男孩纸':'姑娘' }}
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.sex?'男孩纸':'姑娘' }}
         </view>
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.age }}个月
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.age }}个月
         </view>
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.immune?'已':'未' }}注射
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.immune?'已':'未' }}注射
         </view>
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.insectRepellent?'已':'未' }}驱虫
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.insectRepellent?'已':'未' }}驱虫
         </view>
         <view>
-        <van-icon name="certificate" color="#0cf"/>
-        {{ animalInfo.sterilization?'已':'未' }}绝育
+            <van-icon name="certificate" color="#0cf" />
+            {{ animalInfo.sterilization?'已':'未' }}绝育
         </view>
     </view>
+
+    <van-goods-action>
+        <van-goods-action-icon icon="revoke" text="返回首页" bind:click="backHome" />
+        <van-goods-action-icon icon="{{ animalInfo.like ? 'like' : 'like-o'}}" text="{{ animalInfo.like ? '取消关注' : '关注'}}" bind:click="onLike" />
+        <van-goods-action-button text="加入云养" type="warning" bind:click="onClickButton" />
+    </van-goods-action>
 </view>

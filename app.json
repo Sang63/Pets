@@ -1,5 +1,6 @@
 {
     "pages": [
+        
         "pages/home/index",
         "pages/cloudRalse/index",
         "pages/mine/index",
