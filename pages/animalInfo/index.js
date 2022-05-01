@@ -30,7 +30,7 @@ Page({
             const { data } = await wx.cloud.database().collection('animal').doc(id).get()
             animalInfo = data
         }
-        console.log(animalInfo)
+        // console.log(animalInfo)
         this.setData({
             animalInfo
         })

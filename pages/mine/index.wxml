@@ -30,7 +30,7 @@
     <view class="group">
         <van-cell-group>
             <van-cell icon="flower-o" title="我的云养" is-link />
-            <van-cell icon="eye-o" title="我的关注" is-link />
+            <van-cell bind:tap="toMyLike" icon="eye-o" title="我的关注" is-link />
             <van-cell icon="cart-o" title="我的订单" is-link />
         </van-cell-group>
     </view>

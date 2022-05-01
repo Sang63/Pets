@@ -1,11 +1,11 @@
 {
     "pages": [
-        
+        "pages/mine/index",
         "pages/home/index",
         "pages/cloudRalse/index",
-        "pages/mine/index",
         "pages/index/index",
-        "pages/animalInfo/index"
+        "pages/animalInfo/index",
+        "pages/myLike/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

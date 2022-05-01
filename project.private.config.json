@@ -23,6 +23,13 @@
                     "name": "",
                     "pathName": "pages/animalInfo/index",
                     "query": "id=ea795837624e571e05414eef157e50e8",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/myLike/index",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

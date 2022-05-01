@@ -3,6 +3,12 @@ Page({
     data: {
         userInfo:null
     },
+    //进入我的关注
+    toMyLike(){
+        wx.navigateTo({
+          url: '/pages/myLike/index',
+        })
+    },
     /*用户授权*/
     async login(){
         // console.log("获取到用户信息")
