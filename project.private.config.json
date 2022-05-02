@@ -30,6 +30,13 @@
                     "name": "",
                     "pathName": "pages/myLike/index",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/pay/index",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

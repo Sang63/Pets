@@ -43,6 +43,6 @@
     <van-goods-action>
         <van-goods-action-icon icon="revoke" text="返回首页" bind:click="backHome" />
         <van-goods-action-icon icon="{{ animalInfo.like ? 'like' : 'like-o'}}" text="{{ animalInfo.like ? '取消关注' : '关注'}}" bind:click="onLike" />
-        <van-goods-action-button text="加入云养" type="warning" bind:click="onClickButton" />
+        <van-goods-action-button text="加入云养" type="warning" bind:click="toPay" />
     </van-goods-action>
 </view>

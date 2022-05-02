@@ -5,7 +5,8 @@
         "pages/cloudRalse/index",
         "pages/index/index",
         "pages/animalInfo/index",
-        "pages/myLike/index"
+        "pages/myLike/index",
+        "pages/pay/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

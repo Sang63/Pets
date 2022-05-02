@@ -1,0 +1,24 @@
+#pay{
+    width: 100%;
+    height: auto;
+    background: #dfdfdf;
+    margin-top: 20rpx;
+}
+.header{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+}
+.left{
+    box-sizing: border-box;
+    padding-left: 20rpx;
+}
+.title{
+    font-size: 34rpx;
+}
+.text{
+    font-size: 28rpx;
+    color: rgb(155,155,155);
+    margin-top: 15rpx;
+}

@@ -1,0 +1,8 @@
+<view class="goods-card">
+    <radio disabled="{{ goodsData.amount<=0 }}" class="radio" checked="{{ goodsData.amount<=0 ? false : goodsData.checked }}" color="#0cf" bind:tap="changeChecked" />
+    <van-card custom-class="ani-card" style="flex: 1;" tag="{{ goodsData.amount>0 ? '' :'售罄' }}" price="{{ goodsData.price }}" title="{{ goodsData.title }}" thumb="{{ goodsData.showPictures }}">
+        <view slot="num">
+            <van-stepper bind:change="changeValue" disabled="{{ goodsData.amount<=0 }}" class="slot" theme="round" button-size="18px" value="{{ goodsData.value }}" step="1" />
+        </view>
+    </van-card>
+</view>

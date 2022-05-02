@@ -1,0 +1,18 @@
+.goods-card{
+    margin-bottom: 20rpx;
+    border-bottom: 2rpx solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+.slot{
+    position: absolute;
+    right: 0rpx;
+    top: 75%;
+}
+.radios{
+    margin: 0 20rpx;
+}
+.ani-card{
+    background-color: #fff;
+}

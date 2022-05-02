@@ -94,4 +94,21 @@ Page({
         this.getAnimalInfo()
         wx.hideLoading()
     },
+    toPay(){
+        const {
+            userId,
+            id
+        } = this.data;
+        if(userId){
+            wx.navigateTo({
+                url: `/pages/pay/index?id=${id}`,//将宠物id传到云养界面
+            })
+        }else{
+            wx.showToast({
+                icon: 'none',
+                title: '请登录后重试',
+            })
+            return;
+        }
+    }
 })
