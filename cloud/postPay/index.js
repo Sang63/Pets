@@ -67,8 +67,8 @@ exports.main = async (event) => {
     // 商品购买数量可能不一样，所以需要对每一个商品单独操作，同时还要满足，操作完毕后再返回支付成功
     await userInfo.doc( userId ).update({
         data: {
-            money: db.command.inc(-total),
-            loveValue: db.command.inc(total),
+            money: db.command.inc(-total),   //自减金额
+            loveValue: db.command.inc(total),  //自增爱心值
         }
     })
 
@@ -79,7 +79,6 @@ exports.main = async (event) => {
     }))
 
     await Promise.allSettled(updataArray)
-    /* 3、更新商品数据库 */
 
 
     /* 4、生成云养数据 */
@@ -90,7 +89,6 @@ exports.main = async (event) => {
             animalId
         }
     })
-    /* 4、生成云养数据 */
 
     return {
         message: '支付成功',

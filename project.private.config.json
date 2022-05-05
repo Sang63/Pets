@@ -37,6 +37,13 @@
                     "name": "",
                     "pathName": "pages/pay/index",
                     "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/cloudRalse/index",
+                    "query": "",
                     "scene": null,
                     "launchMode": "default"
                 }

@@ -9,6 +9,12 @@ Page({
           url: '/pages/myLike/index',
         })
     },
+    //进入我的云养
+    toColdRalse(){
+        wx.switchTab({
+          url: '/pages/cloudRalse/index',
+        })
+    },
     /*用户授权*/
     async login(){
         // console.log("获取到用户信息")

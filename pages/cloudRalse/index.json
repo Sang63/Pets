@@ -2,5 +2,12 @@
   "navigationBarTitleText": "云养",
   "navigationBarBackgroundColor": "#0cf",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "ani-card": "/components/card/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-search": "@vant/weapp/search/index"
+  }
 }

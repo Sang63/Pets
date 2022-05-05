@@ -27,7 +27,7 @@ Page({
         console.log(userInfo)
         this.setData({
             userId: userInfo._id,
-            animalId: 'ea795837624e571e05414ef564b35040'
+            animalId: id
         })
         this.getAnimalInfo()
         this.getGoodsList()
@@ -129,9 +129,14 @@ Page({
             })
             console.log(result)
 
-            result.code && wx.redirectTo({
-                url: '/pages/cloudRalse/index',
-            })
+            // result.code && wx.redirectTo({
+            //     url: '/pages/cloudRalse/index',
+            // })
+            if(result.code===200){
+                wx.switchTab({
+                  url: '/pages/cloudRalse/index',
+                })
+            }
 
             wx.showToast({
                 icon: 'none',

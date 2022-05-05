@@ -6,7 +6,8 @@
         "pages/index/index",
         "pages/animalInfo/index",
         "pages/myLike/index",
-        "pages/pay/index"
+        "pages/pay/index",
+        "pages/userInfo/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
