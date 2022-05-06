@@ -15,6 +15,12 @@ Page({
           url: '/pages/cloudRalse/index',
         })
     },
+    //进入个人资料
+    toUserInfo(){
+        wx.navigateTo({
+          url: '/pages/userInfo/index',
+        })
+    },
     /*用户授权*/
     async login(){
         // console.log("获取到用户信息")

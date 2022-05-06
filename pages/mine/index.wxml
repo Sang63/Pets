@@ -36,7 +36,7 @@
     </view>
     <view class="group">
         <van-cell-group class="group">
-            <van-cell icon="diamond-o" title="个人资料" is-link />
+            <van-cell bind:tap="toUserInfo" icon="diamond-o" title="个人资料" is-link />
             <van-cell wx:if="{{userInfo}}" bind:tap="close" icon="close" title="退出登录" is-link />
         </van-cell-group>
     </view>

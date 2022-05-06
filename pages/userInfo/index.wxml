@@ -1,2 +1,11 @@
-<!--pages/userInfo/index.wxml-->
-<text>pages/userInfo/index.wxml</text>
+<view id="userInfo">
+    <view class="headr">
+        <image bind:tap="chooseImage" class="img" src="{{ showAvatarUrl }}"></image>
+    </view>
+    <view class="text">
+        <van-cell-group>
+            <van-field model:value="{{ nickName }}" label="昵称" placeholder="请输入您的昵称" input-align="right" />
+        </van-cell-group>
+    </view>
+    <van-button class="btn" block bind:tap="submit" color="#0cf" round>确认修改</van-button>
+</view>

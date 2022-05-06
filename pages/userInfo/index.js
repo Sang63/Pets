@@ -1,66 +1,80 @@
-// pages/userInfo/index.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        userId: '',
+        avatarUrl: '',
+        nickName: '',
+        showAvatarUrl:''
     },
+    onLoad() {
+        const userInfo = wx.getStorageSync('userInfo')
+        if (userInfo) {
+            this.setData({
+                userId: userInfo._id
+            })
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
+            this.getUserInfo()
+        }
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    //获取用户信息
+    async getUserInfo() {
+        const {
+            data
+        } = await wx.cloud.database().collection('userInfo').doc(this.data.userId).get()
+        console.log(data)
+        this.setData({
+            showAvatarUrl: data.avatarUrl,
+            avatarUrl:data.avatarUrl,
+            nickName: data.nickName
+        })
     },
+    //确认修改信息
+    async submit() {
+        const {
+            nickName,
+            userId,
+            avatarUrl,
+            showAvatarUrl
+        } = this.data;
+        let bufferAvatarUrl=''
+        wx.showLoading({
+            title: '修改ing。。。',
+        })
+        if(avatarUrl !== showAvatarUrl){
+            bufferAvatarUrl = wx.getFileSystemManager().readFileSync(showAvatarUrl)  //读取本地头像信息
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
+        }
+        console.log(bufferAvatarUrl)
 
+        const data = await wx.cloud.callFunction({
+            name: 'patchUserInfo',
+            data: {
+                nickName,
+                userId,
+                avatarUrl,
+                bufferAvatarUrl
+                
+            }
+        })
+        wx.hideLoading()
+        wx.switchTab({
+            url: '/pages/mine/index',
+        })
     },
+    //更换头像
+    async chooseImage() {
+        const { tempFiles } = await wx.chooseMedia({
+          count:1,
+          mediaType:['image'],
+          sourceType:['album','camera']
+        })
+        // console.log(tempFiles[0])
+        this.setData({
+            showAvatarUrl:tempFiles[0].tempFilePath
+        })
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+        // await wx.cloud.uploadFile({
+        //     cloudPath: 'avatarUrl/头像.png',
+        //     filePath: tempFiles[0].tempFilePath, // 文件路径-临时地址
+        // })
     }
 })
